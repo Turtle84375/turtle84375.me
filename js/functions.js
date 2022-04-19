@@ -20,8 +20,9 @@ function getCookie(cname) {
   return "";
 }
 
-function validate(cookie) {
-  if (cookie == "") {
+function validate() {
+  var token = getCookie();
+  if (token == "") {
     window.location = "/";
   } else {
     window.location = "dashboard";
