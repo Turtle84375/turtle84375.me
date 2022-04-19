@@ -22,7 +22,7 @@ function getCookie(cname) {
 
 function validate(cookie) {
   if (cookie == "") {
-    return window.location = "/";
+    window.location = "/";
   } else {
-    return window.location = "dashboard";
+    window.location = "dashboard";
 }
