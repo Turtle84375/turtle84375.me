@@ -21,5 +21,8 @@ function getCookie(cname) {
 }
 
 function validate(cookie) {
-  return window.location = "/";
+  if (cookie == "") {
+    return window.location = "/";
+  } else {
+    return window.location = "dashboard";
 }
