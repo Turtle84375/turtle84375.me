@@ -3,12 +3,12 @@
   <head>
     <title>Turtle84375 - Dashboard</title>
     <script src="js/functions.js"></script>
-  </head>
-  <body>
     <script>
       var info = getCookie(token);
-      validate(info);
+      window.onload = validate(info);
     </script>
+  </head>
+  <body>
     <p>You've logged in!</p>
   </body>
 </html>
