@@ -1,0 +1,16 @@
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #0c1725;
+  color: white;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.title-parent {
+  background-color: #182433;
+  padding: 20px;
+  display: inline-block;
+  border-radius: 20px;
+}
