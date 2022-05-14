@@ -5,13 +5,27 @@ body {
   color: white;
 }
 
-.title {
-  font-size: 30px;
-}
-
 .title-parent {
   background-color: #182433;
   padding: 20px;
   display: inline-block;
   border-radius: 20px;
+}
+
+.title {
+  font-size: 30px;
+}
+
+input {
+  padding: 7px;
+  font-size: 15px;
+  border-radius: 20px;
+  border: 0;
+  box-shadow: 6px 4px 14px 2px rgb(0 0 0 / 40%);
+  outline: none;
+  transition: 0.5s;
+}
+
+input:hover {
+  background-color: #f2f2f2;
 }
