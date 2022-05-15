@@ -4,10 +4,9 @@
     <link rel="stylesheet" href="style.css" />
     <title>Dashboard - Turtle84375</title>
     <script src="https://code.jquery.com/jquery-3.6.0.js">
-      $.post("https://auth.turtle84375.me/api/authorize",
-        {
-          username: document.cookie;
-        });
+      $.post( "https://auth.turtle84375.me/api/authorize", function( data ) {
+        $( ".result" ).html( data );
+      });
     </script>
   </head>
   <body>
