@@ -45,7 +45,7 @@
       }
 	    
       function check() {
-	if (document.getElementById("uname") !== "" || document.getElementById("pwd") !== "") {
+	if (document.getElementById("uname") !== "" && document.getElementById("pwd") !== "") {
 	  document.getElementById("submit").disabled = false;
           document.getElementById("errorMessage").innerHTML = "enabled";
         } else {
