@@ -44,7 +44,7 @@
       }
 	    
       function check() {
-	if (uname == "" || pwd == "") {
+	if (document.getElementById("uname") == "" || document.getElementById("pwd") == "") {
 	  document.getElementById("submit").disabled = true;
         } else {
 	  document.getElementById("submit").disabled = false;
