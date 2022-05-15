@@ -45,8 +45,11 @@
         document.getElementById("errorMessage").innerHTML = "Incorrect username or password!";
       } else if (error == "2") {
 	document.getElementById("errorMessage").innerHTML = "Login is disabled, try again later!";
-      } else if (error =="3") {
+      } else if (error == "3") {
 	document.getElementById("errorMessage").innerHTML = "Your account has been banned!<br>Contact Turtle84375 for more details.";
+      } else if (error == "0") {
+	document.getElementById("errorMessage").style.color = "chartreuse";
+	document.getElementById("errorMessage").innerHTML = "Registration successful!";
       } else {
         document.getElementById("errorMessage").style.hidden = true;
       }
