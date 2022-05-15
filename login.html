@@ -32,7 +32,11 @@
       var url_string = window.location.href;
       var url = new URL(url_string);
       var error = url.searchParams.get("error");
-      document.getElementById("error").innerHTML = error;
+      if (error == "1") {
+        document.getElementById("error").innerHTML = error;
+      } else {
+        document.getElementById("error").style.hidden = true;
+      }
     </script>
   </body>
 </html>
