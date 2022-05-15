@@ -44,10 +44,10 @@
       }
 	    
       function check() {
-	if (document.getElementById("uname") == "" || document.getElementById("pwd") == "") {
-	  document.getElementById("submit").disabled = true;
-        } else {
+	if (document.getElementById("uname") !== "" || document.getElementById("pwd") !== "") {
 	  document.getElementById("submit").disabled = false;
+        } else {
+	  document.getElementById("submit").disabled = true;
 	}
       }
     </script>
