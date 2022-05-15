@@ -3,16 +3,11 @@
   <head>
     <link rel="stylesheet" href="style.css" />
     <title>Dashboard - Turtle84375</title>
-    <script src="js/functions.js"></script>
+    <script>
+      window.location.href = "login";
+    </script>
   </head>
   <body>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        if (getCookie("auth") === "") {
-          window.location.href = "login";
-        }
-      });
-    </script>
     <!-- Heading introduction -->
     <div class="title-parent">
       <span class="title">Dashboard</span>
