@@ -28,5 +28,11 @@
 	<br>
 	<p id="error"></p>
     </div>
+    <script>
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      var error = url.searchParams.get("error");
+      document.getElementById("error").innerHTML = error;
+    </script>
   </body>
 </html>
