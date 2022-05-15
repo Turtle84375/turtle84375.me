@@ -4,7 +4,9 @@
     <link rel="stylesheet" href="style.css" />
     <title>Dashboard - Turtle84375</title>
     <script src="js/functions.js">
-      validate();
+      if (getCookie(auth) === "") {
+        window.location.href = "login";
+      }
     </script>
   </head>
   <body>
