@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Turtle84375 - Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Log in - Turtle84375</title>
+    <meta name="description" content="Turtle84375 - Web developer, administrator, gamer, waster of money">
+    <meta name="keywords" content="turtle84375">
   </head>
   <body>
-    <form method="POST" action="https://auth.turtle84375.me/login">
-	<h2>Login to the website:</h2>
-        <div style="color: red;" id="message"></div>
-	<label for="username">Username: </label>
-	<input type="name" name="username">
-	</br>
-	<label for="password">Password: </label>
-	<input type="password" name="password">
-	</br>
-	<input type="submit" value="Login!">
-    </form>
+    <!-- Heading presentation -->
+    <div class="title-parent">
+      <span class="title">Log in</span>
+	<br>
+	<br>
+	<form method="POST" action="https://auth.turtle84375.me/login">
+		<label for="username">Username</label>
+		<br>
+		<input type="name" name="username" placeholder="Insert your username here...">
+		<br>
+		<br>
+		<label for="password">Password: </label>
+		<br>
+		<input type="password" name="password" placeholder="Insert your password here...">
+		<br>
+		<br>
+		<input type="submit" value="Log in">
+    	</form>
+    </div>
   </body>
 </html>
