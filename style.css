@@ -31,6 +31,6 @@ input:hover {
 }
 
 .error {
-  color : red;
+  color : red !important;
   font-size: 10px;
 }
