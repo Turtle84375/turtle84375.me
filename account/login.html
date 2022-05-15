@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+    <title>Login - Turtle84375</title>
+    <meta name="description" content="Turtle84375 - Web developer, administrator, gamer, waster of money">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="turtle84375">
+  </head>
+  <body>
+    <!-- Heading presentation -->
+    <div class="title-parent">
+      <span class="title">Log into your account</span>
+      <br>
+      <a href="signup.html" style="float:right">Don't have an account?</a>
+	  <br>
+    <br>
+		<span>Username:</span>
+      <br>
+		<input id="username" type="name" placeholder="Insert your username here..." autocomplete="off" autocorrect="false" />
+		<br>
+		<br>
+		<span>Password:</span>
+      <br>
+		<input id="password" type="password" placeholder="Insert your password here..." />
+		<br>
+  	  <p id="error" class="error"></p>
+		<button style="float:right" onclick="login(document.getElementById('username').value, document.getElementById('password').value)" id="loginbutton">Log in!</button>
+    </div>
+    <script src="../auth.js"></script>
+    <script src="../state.js"></script>
+    <script>
+      document.getElementById("loginbutton").innerText = "loading...";
+      document.getElementById("loginbutton").setAttribute("disabled", "");
+      function checkVariable() {
+        if (state.loaded == true) {
+          if (state.logged == true) {
+            window.location.href = "dashboard.html";
+          }else{
+            if (state.error != null) {
+              document.getElementById("error").innerText = state.error;
+            }
+              document.getElementById("loginbutton").innerText = "Log in!";
+              document.getElementById("loginbutton").removeAttribute("disabled");
+          }
+        }else{
+          setTimeout(checkVariable, 1000);
+        }
+      }
+      setTimeout(checkVariable, 1000);
+    </script>
+  </body>
+</html>
