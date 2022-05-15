@@ -26,8 +26,13 @@ input {
   transition: 0.5s;
 }
 
-input:hover:not(.disabled) {
+input:hover {
   background-color: #f2f2f2;
+}
+
+input:disabled {
+  background-color: #182433 !important;
+  cursor:not-allowed !important;
 }
 
 .error {
