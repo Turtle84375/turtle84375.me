@@ -40,6 +40,8 @@
         document.getElementById("errorMessage").innerHTML = "Incorrect username or password!";
       } else if (error == "2") {
 	document.getElementById("errorMessage").innerHTML = "Login is disabled, try again later!";
+      } else if (error =="3") {
+	document.getElementById("errorMessage").innerHTML = "Your account has been banned! Contact Turtle84375 for more details.";
       } else {
         document.getElementById("errorMessage").style.hidden = true;
       }
