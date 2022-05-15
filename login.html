@@ -34,6 +34,8 @@
       var error = url.searchParams.get("error");
       if (error == "1") {
         document.getElementById("error").innerHTML = "Incorrect username or password!";
+      } else if (error == "2") {
+	document.getElementById("error").innerHTML = "Login is disabled, try again later!";
       } else {
         document.getElementById("error").style.hidden = true;
       }
