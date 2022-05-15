@@ -26,18 +26,18 @@
 		<input type="submit" value="Log in">
     	</form>
 	<br>
-	<p id="error"></p>
+	<p id="errorMessage" class="error"></p>
     </div>
     <script>
       var url_string = window.location.href;
       var url = new URL(url_string);
       var error = url.searchParams.get("error");
       if (error == "1") {
-        document.getElementById("error").innerHTML = "Incorrect username or password!";
+        document.getElementById("errorMessage").innerHTML = "Incorrect username or password!";
       } else if (error == "2") {
-	document.getElementById("error").innerHTML = "Login is disabled, try again later!";
+	document.getElementById("errorMessage").innerHTML = "Login is disabled, try again later!";
       } else {
-        document.getElementById("error").style.hidden = true;
+        document.getElementById("errorMessage").style.hidden = true;
       }
     </script>
   </body>
