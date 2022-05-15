@@ -21,7 +21,7 @@ function getCookie(cname) {
 };
 
 function validate() {
-  var token = getCookie();
+  var token = getCookie(auth);
   if (token == "") {
     window.location = "/";
   } else {
