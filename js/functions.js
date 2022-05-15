@@ -23,7 +23,7 @@ function getCookie(cname) {
 function validate() {
   var token = getCookie(auth);
   if (token == "") {
-    window.location = "/";
+    window.location.href = "/";
   } else {
-    window.location = "dashboard";
+    window.location.href = "dashboard";
 };
