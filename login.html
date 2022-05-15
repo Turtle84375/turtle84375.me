@@ -15,20 +15,23 @@
 	<form method="POST" action="https://auth.turtle84375.me/login">
 		<label for="username">Username</label>
 		<br>
-		<input type="name" name="username" placeholder="Insert your username here...">
+		<input id="uname" type="name" name="username" placeholder="Insert your username here...">
 		<br>
 		<br>
 		<label for="password">Password: </label>
 		<br>
-		<input type="password" name="password" placeholder="Insert your password here...">
+		<input id="pwd" type="password" name="password" placeholder="Insert your password here...">
 		<br>
 		<br>
-		<input type="submit" value="Log in">
+		<input id="submit" type="submit" value="Log in" disabled>
     	</form>
 	<br>
 	<p id="errorMessage" class="error"></p>
     </div>
     <script>
+      document.getElementById("uname").addEventListener("input", check);
+      document.getElementById("pwd").addEventListener("input", check);
+	    
       var url_string = window.location.href;
       var url = new URL(url_string);
       var error = url.searchParams.get("error");
@@ -38,6 +41,14 @@
 	document.getElementById("errorMessage").innerHTML = "Login is disabled, try again later!";
       } else {
         document.getElementById("errorMessage").style.hidden = true;
+      }
+	    
+      function check() {
+	if (uname == "" || pwd == "") {
+	  document.getElementById("submit").disabled = true;
+        } else {
+	  document.getElementById("submit").disabled = false;
+	}
       }
     </script>
   </body>
