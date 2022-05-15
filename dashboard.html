@@ -5,9 +5,11 @@
     <title>Dashboard - Turtle84375</title>
     <script src="js/functions.js"></script>
     <script>
-      if (getCookie("auth") === "") {
-        window.location = "login";
-      }
+      document.addEventListener("DOMContentLoaded", function() {
+        if (getCookie("auth") === "") {
+          window.location = "login";
+        }
+      });
     </script>
   </head>
   <body>
