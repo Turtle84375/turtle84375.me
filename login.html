@@ -27,6 +27,7 @@
     	</form>
 	<br>
 	<p id="errorMessage" class="error"></p>
+	<p id="testMessage"></p>
     </div>
     <script>
       document.getElementById("uname").addEventListener("input", check);
@@ -46,8 +47,10 @@
       function check() {
 	if (document.getElementById("uname") !== "" || document.getElementById("pwd") !== "") {
 	  document.getElementById("submit").disabled = false;
+          document.getElementById("errorMessage").innerHTML = "enabled";
         } else {
 	  document.getElementById("submit").disabled = true;
+          document.getElementById("errorMessage").innerHTML = "disabled";
 	}
       }
     </script>
