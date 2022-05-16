@@ -32,7 +32,7 @@
       function checkVariable() {
         if (state.loaded == true) {
           if (state.logged == false) {
-            document.getElementById("text").innerText = "This website is still being worked on - please check back tomorrow!";
+            document.getElementById("text").innerText = "This website is still being worked on - please check back later!";
             document.getElementById("accountcontrols").innerHTML = `<a href="account/login">Login</a><br><a href="account/signup">Sign Up</a>`;
           }else{
             window.location.href = "account/dashboard";
