@@ -19,7 +19,7 @@ async function postData(url = '', data = {}) {
 
 function register(username, password) {
   if (state.logged) return;
-  postData('https://turtle84375-auth.lankybox02.repl.co/signup', { username: username, password: password })
+  postData('https://auth-production-3aab.up.railway.app/signup', { username: username, password: password })
     .then(data => {
       if (data.success == true) {
         localStorage.setItem("username", username);
