@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Turtle84375</title>
+  </head>
+  <body>
+    <!-- Heading introduction -->
+      <div class="title-parent">
+          <span class="title">Projects</span>
+          <br>
+        <span>This page is still under construction...</span>
+        </div>
+    <br>
+      <div class="title-parent">
+          <span class="title">News</span>
+          <br>
+        <span>Insert blog posts here...</span>
+        </div>
+    <br>
+        <div class="title-parent">
+          <span class="title">Account</span>
+          <br>
+          Nothing here yet!
+        </div>
+    <script src="../auth.js"></script>
+    <script src="../state.js"></script>
+    <script>
+      function checkVariable() {
+        if (state.loaded == true) {
+          if (state.logged == false) {
+            window.location.href = "login";
+          }
+        }else{
+          setTimeout(checkVariable, 1000);
+        }
+      }
+      setTimeout(checkVariable, 1000);
+    </script>
+  </body>
+</html>

@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Home - Turtle84375</title>
     <meta name="description" content="Turtle84375 - Web developer, administrator, gamer, waster of money">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="turtle84375">
   </head>
   <body>
@@ -17,14 +18,30 @@
     <br>
     <br>
     <!-- About section -->
-    <div style="padding-left:20px">
+    <div class="title-parent">
       <span class="title">About</span>
       <br>
-      <p>This website is still being worked on - please come back later!</p>
-      <br>
-      <a href="login">Login</a>
-      <br>
-      <a href="register">Register</a>
+      <p id="text"></p>
+      <div id="accountcontrols">
+      </div>
     </div>
+    <script src="auth.js"></script>
+    <script src="state.js"></script>
+    <script>
+      document.getElementById("text").innerText = "Loading...";
+      function checkVariable() {
+        if (state.loaded == true) {
+          if (state.logged == false) {
+            document.getElementById("text").innerText = "This website is still being worked on - please check back tomorrow!";
+            document.getElementById("accountcontrols").innerHTML = `<a href="account/login">Login</a><br><a href="account/signup">Sign Up</a>`;
+          }else{
+            window.location.href = "account/dashboard";
+          }
+        }else{
+          setTimeout(checkVariable, 1000);
+        }
+      }
+      setTimeout(checkVariable, 1000);
+    </script>
   </body>
 </html>

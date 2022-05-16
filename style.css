@@ -1,10 +1,7 @@
-html {
-  cursor: auto;
-}
-
 body {
   font-family: Helvetica, sans-serif;
   background-color: #0c1725;
+  text-align: center;
   margin: 40px 30px;
   color: white;
 }
@@ -14,32 +11,47 @@ body {
   padding: 20px;
   display: inline-block;
   border-radius: 20px;
+  width: calc(30vh + 10%);
+  margin: 5px;
 }
 
 .title {
   font-size: 30px;
 }
 
-input {
+input, button {
+  background-color: #f2f2f2;
   padding: 10px;
   font-size: 15px;
   border-radius: 20px;
   border: 0;
   box-shadow: 6px 4px 14px 2px rgb(0 0 0 / 40%);
   outline: none;
-  transition: 0.5s;
+  transition: 1s;
 }
 
-input:hover {
-  background-color: #f2f2f2;
+input:hover, button:hover {
+  background-color: #d6d6d6;
 }
 
-input:disabled {
-  background-color: #e5e5e5 !important;
+input:disabled, button:disabled {
+  background-color: #b8b8b8 !important;
   cursor: not-allowed !important;
 }
 
+button {
+  cursor: pointer;
+}
+
 .error {
-  color : red;
+  color: #ff8080;
   font-size: 15px;
+}
+
+a {
+  color: white;
+}
+
+div {
+  text-align: left;
 }
