@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Log out - Turtle84375</title>
+    <script>
+      if (document.cookie === "") {
+        window.location.href = "/";
+      } else {
+        document.cookie = "auth=; max_age=0; path=.turtle84375.me;";
+        window.location.href = "/logged-out";
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Heading presentation -->
+    <div class="title-parent">
+      <span class="title">Logging out...</span>
+	<br>
+  </body>
+</html>
