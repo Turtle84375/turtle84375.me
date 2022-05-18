@@ -44,6 +44,7 @@
     <script>
       document.getElementById("uname").addEventListener("input", check);
       document.getElementById("pwd").addEventListener("input", check);
+      document.getElementById("pwd-confirm").addEventListener("input", check_pwd);
 	    
       var url_string = window.location.href;
       var url = new URL(url_string);
@@ -63,6 +64,15 @@
 	  document.getElementById("submit").disabled = false;
         } else {
 	  document.getElementById("submit").disabled = true;
+	}
+      }
+	    
+      function check_pwd() {
+        if (document.getElementById("pwd").value === document.getElementById("pwd-confirm").value) {
+	  document.getElementById("submit").disabled = false;
+        } else {
+	  document.getElementById("submit").disabled = true;
+          document.getElementById("errorMessage").innerHTML = "Passwords must match!";
 	}
       }
     </script>
